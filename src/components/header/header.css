@@ -1,0 +1,139 @@
+@import "./../../styles/keyframes.css";
+
+header {
+    max-width: 1440px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 72px;
+}
+
+a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    color: #F8F9FA;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.logo:hover span {
+    color: #F7C518;
+}
+
+.logo span {
+    line-height: 0.65;
+    font-weight: 800;
+    font-size: 32px;
+    color: #3355FF;
+    transition: color 0.5s ease;
+}
+
+.logo span:first-of-type {
+    transform: rotate(180deg);
+}
+
+.logo span:last-of-type {
+    transform: rotate(90deg);
+}
+
+.p-relative {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.p-relative img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.p-relative:hover .reveal-left {
+    animation: reveal 0.2s forwards;
+}
+
+.p-relative:not(hover) .hide-left {
+    animation: hide 0.2s forwards;
+}
+
+.p-relative:hover .reveal-top {
+    animation: reveal 0.2s forwards;
+}
+
+.p-relative:not(hover) .hide-top {
+    width: 120px;
+    animation: hide 0.2s forwards;
+}
+
+.languages-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.languages-container span {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    line-height: 19.2px;
+    cursor: pointer;
+}
+
+.languages-container .p-relative:hover:first-of-type .reveal-bottom-right {
+    animation: reveal 0.2s forwards;
+}
+
+.languages-container .p-relative:not(hover):first-of-type .hide-bottom-right {
+    animation: hide 0.2s forwards;
+}
+
+.languages-container .p-relative:hover:last-of-type .reveal-top-left {
+    animation: reveal 0.2s forwards;
+}
+
+.languages-container .p-relative:not(hover):last-of-type .hide-top-left {
+    animation: hide 0.2s forwards;
+}
+
+.animation-unset {
+    opacity: 0;
+}
+
+.slider {
+    width: 32px;
+    height: 8px;
+    position: relative;
+    background-color: #F87A55;
+    border: 1px solid #F8F9FA;
+    border-radius: 20px;
+}
+
+.slider .circle {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    transform: translate(-1px, -50%);
+    background-color: #3355FF;
+    border: 1px solid #F8F9FA;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.slider .slider-animation {
+    transform: translate(17px, -50%);
+}
