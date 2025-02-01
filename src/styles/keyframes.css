@@ -1,13 +1,18 @@
+/* Keyframes for header.css */
+
 @keyframes reveal {
     0% {
         clip-path: inset(var(--start));
     }
+
     30% {
         clip-path: inset(var(--mid1));
     }
+
     60% {
         clip-path: inset(var(--mid2));
     }
+
     100% {
         clip-path: inset(0 0 0 0);
     }
@@ -17,12 +22,15 @@
     0% {
         clip-path: inset(0 0 0 0);
     }
+
     30% {
         clip-path: inset(var(--mid2));
     }
+
     60% {
         clip-path: inset(var(--mid1));
     }
+
     100% {
         clip-path: inset(var(--start));
     }
@@ -74,4 +82,79 @@
     --start: 0 100% 100% 0;
     --mid1: 0 70% 70% 0;
     --mid2: 0 40% 40% 0;
+}
+
+/* Keyframes for hero.css */
+
+@keyframes expandWidth {
+    0% {
+        width: 147.64px;
+    }
+
+    50% {
+        width: 220px;
+    }
+
+    70% {
+        width: 215px;
+    }
+
+    100% {
+        width: 217.03px;
+        background-color: #3355FF;
+    }
+}
+
+@keyframes contractWidth {
+    0% {
+        width: 217.03px;
+        background-color: #3355FF;
+    }
+
+    50% {
+        width: 147.64px;
+    }
+
+    70% {
+        width: 145px;
+    }
+
+    80% {
+        width: 148px;
+    }
+
+    100% {
+        width: 147.64px;
+        background-color: transparent;
+    }
+}
+
+@keyframes rotateForwards {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(380deg);
+    }
+
+    70% {
+        transform: rotate(355deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateBackwards {
+    0% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
 }
