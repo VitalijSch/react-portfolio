@@ -1,17 +1,42 @@
 @import "./../../styles/keyframes.css";
 
-header {
+.header {
     max-width: 1440px;
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 19px 72px;
 }
 
-a {
+.header__logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.header__logo-letter {
+    line-height: 0.65;
+    font-weight: 800;
+    font-size: 40px;
+    color: #3355FF;
+}
+
+.header__logo:hover .header__logo-letter {
+    color: #F7C518;
+}
+
+.header__nav-item,
+.header__language-option {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__nav-link {
     font-size: 18px;
     font-weight: 700;
     line-height: 21.6px;
@@ -19,69 +44,37 @@ a {
     cursor: pointer;
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.logo:hover span {
-    color: #F7C518;
-}
-
-.logo span {
-    line-height: 0.65;
-    font-weight: 800;
-    font-size: 32px;
-    color: #3355FF;
-    transition: color 0.5s ease;
-}
-
-.logo span:first-of-type {
-    transform: rotate(180deg);
-}
-
-.logo span:last-of-type {
-    transform: rotate(90deg);
-}
-
-.p-relative {
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-
-.p-relative img {
+.header__nav-icon,
+.header__language-icon {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.p-relative:hover .reveal-left {
+.header__nav-item:hover .header__reveal-left {
     animation: reveal 0.2s forwards;
 }
 
-.p-relative:not(hover) .hide-left {
+.header__nav-item:not(hover) .header__hide-left {
     animation: hide 0.2s forwards;
 }
 
-.p-relative:hover .reveal-top {
+.header__nav-item:hover .header__reveal-top {
     animation: reveal 0.2s forwards;
 }
 
-.p-relative:not(hover) .hide-top {
+.header__nav-item:not(hover) .header__hide-top {
     width: 120px;
     animation: hide 0.2s forwards;
 }
 
-.languages-container {
+.header__languages {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.languages-container span {
+.header__language-label {
     width: 32px;
     height: 32px;
     display: flex;
@@ -92,27 +85,27 @@ a {
     cursor: pointer;
 }
 
-.languages-container .p-relative:hover:first-of-type .reveal-bottom-right {
+.header__language-option--first:hover .header__reveal-bottom-right {
     animation: reveal 0.2s forwards;
 }
 
-.languages-container .p-relative:not(hover):first-of-type .hide-bottom-right {
+.header__language-option--first:not(hover) .header__hide-bottom-right {
     animation: hide 0.2s forwards;
 }
 
-.languages-container .p-relative:hover:last-of-type .reveal-top-left {
+.header__language-option--second:hover .header__reveal-top-left {
     animation: reveal 0.2s forwards;
 }
 
-.languages-container .p-relative:not(hover):last-of-type .hide-top-left {
+.header__language-option--second:not(hover) .header__hide-top-left {
     animation: hide 0.2s forwards;
 }
 
-.animation-unset {
+.header__language-icon--no-animation {
     opacity: 0;
 }
 
-.slider {
+.header__language-slider {
     width: 32px;
     height: 8px;
     position: relative;
@@ -121,7 +114,7 @@ a {
     border-radius: 20px;
 }
 
-.slider .circle {
+.header__language-circle {
     width: 16px;
     height: 16px;
     position: absolute;
@@ -134,6 +127,6 @@ a {
     transition: transform 0.2s linear;
 }
 
-.slider .slider-animation {
+.header__language-circle--active {
     transform: translate(17px, -50%);
 }

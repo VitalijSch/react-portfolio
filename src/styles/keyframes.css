@@ -36,49 +36,49 @@
     }
 }
 
-.reveal-top {
+.header__reveal-top {
     --start: 0 0 100% 0;
     --mid1: 0 0 70% 0;
     --mid2: 0 0 40% 0;
 }
 
-.hide-top {
+.header__hide-top {
     --start: 0 0 100% 0;
     --mid1: 0 0 70% 0;
     --mid2: 0 0 40% 0;
 }
 
-.reveal-left {
+.header__reveal-left {
     --start: 0 100% 0 0;
     --mid1: 0 70% 0 0;
     --mid2: 0 40% 0 0;
 }
 
-.hide-left {
+.header__hide-left {
     --start: 0 100% 0 0;
     --mid1: 0 70% 0 0;
     --mid2: 0 40% 0 0;
 }
 
-.reveal-bottom-right {
+.header__reveal-bottom-right {
     --start: 100% 0 0 100%;
     --mid1: 70% 0 0 70%;
     --mid2: 40% 0 0 40%;
 }
 
-.hide-bottom-right {
+.header__hide-bottom-right {
     --start: 100% 0 0 100%;
     --mid1: 70% 0 0 70%;
     --mid2: 40% 0 0 40%;
 }
 
-.reveal-top-left {
+.header__reveal-top-left {
     --start: 0 100% 100% 0;
     --mid1: 0 70% 70% 0;
     --mid2: 0 40% 40% 0;
 }
 
-.hide-top-left {
+.header__hide-top-left {
     --start: 0 100% 100% 0;
     --mid1: 0 70% 70% 0;
     --mid2: 0 40% 40% 0;
