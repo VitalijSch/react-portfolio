@@ -1,0 +1,132 @@
+@import "./../../styles/keyframes.css";
+
+.header {
+    max-width: 1440px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 72px;
+}
+
+.header__logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.header__logo-letter {
+    line-height: 0.65;
+    font-weight: 800;
+    font-size: 40px;
+    color: #3355FF;
+}
+
+.header__logo:hover .header__logo-letter {
+    color: #F7C518;
+}
+
+.header__nav-item,
+.header__language-option {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__nav-link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    color: #F8F9FA;
+    cursor: pointer;
+}
+
+.header__nav-icon,
+.header__language-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__nav-item:hover .header__reveal-left {
+    animation: reveal 0.2s forwards;
+}
+
+.header__nav-item:not(hover) .header__hide-left {
+    animation: hide 0.2s forwards;
+}
+
+.header__nav-item:hover .header__reveal-top {
+    animation: reveal 0.2s forwards;
+}
+
+.header__nav-item:not(hover) .header__hide-top {
+    width: 120px;
+    animation: hide 0.2s forwards;
+}
+
+.header__languages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header__language-label {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    line-height: 19.2px;
+    cursor: pointer;
+}
+
+.header__language-option--first:hover .header__reveal-bottom-right {
+    animation: reveal 0.2s forwards;
+}
+
+.header__language-option--first:not(hover) .header__hide-bottom-right {
+    animation: hide 0.2s forwards;
+}
+
+.header__language-option--second:hover .header__reveal-top-left {
+    animation: reveal 0.2s forwards;
+}
+
+.header__language-option--second:not(hover) .header__hide-top-left {
+    animation: hide 0.2s forwards;
+}
+
+.header__language-icon--no-animation {
+    opacity: 0;
+}
+
+.header__language-slider {
+    width: 32px;
+    height: 8px;
+    position: relative;
+    background-color: #F87A55;
+    border: 1px solid #F8F9FA;
+    border-radius: 20px;
+}
+
+.header__language-circle {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    transform: translate(-1px, -50%);
+    background-color: #3355FF;
+    border: 1px solid #F8F9FA;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.header__language-circle--active {
+    transform: translate(17px, -50%);
+}
