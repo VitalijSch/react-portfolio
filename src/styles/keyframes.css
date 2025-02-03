@@ -3,36 +3,44 @@
 @keyframes reveal {
     0% {
         clip-path: inset(var(--start));
+        opacity: 1;
     }
 
     30% {
         clip-path: inset(var(--mid1));
+        opacity: 1;
     }
 
     60% {
         clip-path: inset(var(--mid2));
+        opacity: 1;
     }
 
     100% {
         clip-path: inset(0 0 0 0);
+        opacity: 1;
     }
 }
 
 @keyframes hide {
     0% {
         clip-path: inset(0 0 0 0);
+        opacity: 1;
     }
 
     30% {
         clip-path: inset(var(--mid2));
+        opacity: 1;
     }
 
     60% {
         clip-path: inset(var(--mid1));
+        opacity: 1;
     }
 
     100% {
         clip-path: inset(var(--start));
+        opacity: 0;
     }
 }
 

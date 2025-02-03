@@ -22,6 +22,7 @@
     font-weight: 800;
     font-size: 40px;
     color: #3355FF;
+    transition: color 0.5s ease;
 }
 
 .header__logo:hover .header__logo-letter {
@@ -34,6 +35,23 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+}
+
+.header__nav-item:hover .header__reveal-top {
+    animation: reveal 0.2s forwards;
+}
+
+.header__nav-item:not(hover) .header__hide-top {
+    width: 120px;
+    animation: hide 0.2s forwards;
+}
+
+.header__nav-item:hover .header__reveal-left {
+    animation: reveal 0.2s forwards;
+}
+
+.header__nav-item:not(hover) .header__hide-left {
+    animation: hide 0.2s forwards;
 }
 
 .header__nav-link {
@@ -49,23 +67,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.header__nav-item:hover .header__reveal-left {
-    animation: reveal 0.2s forwards;
-}
-
-.header__nav-item:not(hover) .header__hide-left {
-    animation: hide 0.2s forwards;
-}
-
-.header__nav-item:hover .header__reveal-top {
-    animation: reveal 0.2s forwards;
-}
-
-.header__nav-item:not(hover) .header__hide-top {
-    width: 120px;
-    animation: hide 0.2s forwards;
+    opacity: 0;
 }
 
 .header__languages {
@@ -102,7 +104,7 @@
 }
 
 .header__language-icon--no-animation {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .header__language-slider {

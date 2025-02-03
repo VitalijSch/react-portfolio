@@ -6,12 +6,28 @@ import wavingHandIcon from './../../assets/images/hero/waving-hand.svg'
 import linkedinIcon from './../../assets/images/hero/linkedin.svg'
 import githubIcon from './../../assets/images/hero/github.svg'
 import mailIcon from './../../assets/images/hero/mail.svg'
-import Header from '../header/Header'
+import Header from './../../components/header/Header'
 
 function Hero() {
     const [getLaughingSmiley, setLaughingSmiley] = useState<string>(':)')
     const [getName, setName] = useState<string>('Hello World')
     const timeoutIdRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+    const [hasInteracted, setHasInteracted] = useState<boolean>(false)
+
+    const handleMouseEnter = (): void => {
+        getNameDelayed()
+        trackInteraction()
+    }
+
+    const getNameDelayed = (): void => {
+        timeoutIdRef.current = setTimeout(() => {
+            setName("I'M VITALIJ SCHWAB")
+        }, 180)
+    }
+
+    const trackInteraction = () => {
+        setHasInteracted(true);
+    };
 
     const getLaughingSmileyDelayed = (): void => {
         timeoutIdRef.current = setTimeout(() => {
@@ -24,12 +40,6 @@ function Hero() {
             clearTimeout(timeoutIdRef.current)
             setLaughingSmiley(':)')
         }
-    }
-
-    const getNameDelayed = (): void => {
-        timeoutIdRef.current = setTimeout(() => {
-            setName("I'M VITALIJ SCHWAB")
-        }, 180)
     }
 
     const resetNameDelayed = (): void => {
@@ -47,8 +57,8 @@ function Hero() {
                     <div className="hero__top">
                         <div className="hero__left">
                             <div
-                                className="hero__button hero__button--animation"
-                                onMouseEnter={getNameDelayed}
+                                className={`hero__button ${hasInteracted ? "hero__button--animation" : ""}`}
+                                onMouseEnter={handleMouseEnter}
                                 onMouseLeave={resetNameDelayed}
                             >
                                 {getName}
