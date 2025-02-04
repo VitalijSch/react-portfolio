@@ -3,7 +3,7 @@
 .header {
     max-width: 1440px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 2;
     display: flex;
@@ -37,20 +37,32 @@
     cursor: pointer;
 }
 
-.header__nav-item:hover .header__reveal-top {
+.header__nav-item:hover .header__nav-item--reveal-top {
+    --start: 0 0 100% 0;
+    --mid1: 0 0 70% 0;
+    --mid2: 0 0 40% 0;
     animation: reveal 0.2s forwards;
 }
 
-.header__nav-item:not(hover) .header__hide-top {
+.header__nav-item:not(hover) .header__nav-item--hide-top {
     width: 120px;
+    --start: 0 0 100% 0;
+    --mid1: 0 0 70% 0;
+    --mid2: 0 0 40% 0;
     animation: hide 0.2s forwards;
 }
 
-.header__nav-item:hover .header__reveal-left {
+.header__nav-item:hover .header__nav-item--reveal-left {
+    --start: 0 100% 0 0;
+    --mid1: 0 70% 0 0;
+    --mid2: 0 40% 0 0;
     animation: reveal 0.2s forwards;
 }
 
-.header__nav-item:not(hover) .header__hide-left {
+.header__nav-item:not(hover) .header__nav-item--hide-left {
+    --start: 0 100% 0 0;
+    --mid1: 0 70% 0 0;
+    --mid2: 0 40% 0 0;
     animation: hide 0.2s forwards;
 }
 
@@ -76,6 +88,34 @@
     gap: 4px;
 }
 
+.header__language-option--first:hover .header__language-icon--reveal-bottom-right {
+    --start: 100% 0 0 100%;
+    --mid1: 70% 0 0 70%;
+    --mid2: 40% 0 0 40%;
+    animation: reveal 0.2s forwards;
+}
+
+.header__language-option--first:not(hover) .header__language-icon--hide-bottom-right {
+    --start: 100% 0 0 100%;
+    --mid1: 70% 0 0 70%;
+    --mid2: 40% 0 0 40%;
+    animation: hide 0.2s forwards;
+}
+
+.header__language-option--second:hover .header__language-icon--reveal-top-left {
+    --start: 0 100% 100% 0;
+    --mid1: 0 70% 70% 0;
+    --mid2: 0 40% 40% 0;
+    animation: reveal 0.2s forwards;
+}
+
+.header__language-option--second:not(hover) .header__language-icon--hide-top-left {
+    --start: 0 100% 100% 0;
+    --mid1: 0 70% 70% 0;
+    --mid2: 0 40% 40% 0;
+    animation: hide 0.2s forwards;
+}
+
 .header__language-label {
     width: 32px;
     height: 32px;
@@ -85,22 +125,6 @@
     font-weight: 600;
     line-height: 19.2px;
     cursor: pointer;
-}
-
-.header__language-option--first:hover .header__reveal-bottom-right {
-    animation: reveal 0.2s forwards;
-}
-
-.header__language-option--first:not(hover) .header__hide-bottom-right {
-    animation: hide 0.2s forwards;
-}
-
-.header__language-option--second:hover .header__reveal-top-left {
-    animation: reveal 0.2s forwards;
-}
-
-.header__language-option--second:not(hover) .header__hide-top-left {
-    animation: hide 0.2s forwards;
 }
 
 .header__language-icon--no-animation {

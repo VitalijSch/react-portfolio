@@ -1,0 +1,129 @@
+@import './../../styles/keyframes.css';
+
+.about-me {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 144px 120px;
+}
+
+.about-me__location-container {
+    width: 560px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.about-me__background {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.about-me__background--first {
+    top: 20px;
+    z-index: 3;
+}
+
+.about-me__background--second {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.about-me__background--third {
+    top: 204px;
+    z-index: 1;
+}
+
+.about-me__location-info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.about-me__location-info--first {
+    top: 75px;
+    transform: translateX(-50%) rotate(-4deg);
+}
+
+.about-me__location-info--second {
+    top: 180px;
+}
+
+.about-me__location-info--third {
+    top: 275px;
+    transform: translateX(-50%) rotate(4deg);
+}
+
+.about-me__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    white-space: nowrap;
+    color: #F8F9FA;
+}
+
+.about-me__info {
+    width: 560px;
+    height: 432px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-me__name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.about-me__headline {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.about-me__line-icon {
+    --start: 0 100% 0 0;
+    animation: revealHide 3s ease-in-out infinite;
+}
+
+.about-me__description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about-me__button {
+    width: fit-content;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 1px solid #0E1013;
+    border-radius: 100px;
+    font-family: "Bricolage Grotesque";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    box-shadow: 2px 4px 0px 0px #000000;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: translate(0, 0);
+}
+
+.about-me__button:hover {
+    background-color: #F87A55;
+    box-shadow: none;
+    transform: translate(2px, 4px);
+}

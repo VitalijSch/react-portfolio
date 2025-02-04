@@ -5,6 +5,7 @@
     background-image: url("./../../assets/images/hero/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -164,6 +165,9 @@
 
 .hero__bottom-button {
     width: fit-content;
+    font-family: "Bricolage Grotesque";
+    background-color: transparent;
+    color: #F8F9FA;
     box-shadow: 2px 4px 0px 0px #F8F9FA;
     cursor: pointer;
     transition: all 0.2s ease;

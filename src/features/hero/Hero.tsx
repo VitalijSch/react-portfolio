@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react'
 import './Hero.css'
+import { useRef, useState } from 'react'
 import frameIcon from './../../assets/images/hero/picture.svg'
 import profileIcon from './../../assets/images/hero/profile.png'
 import wavingHandIcon from './../../assets/images/hero/waving-hand.svg'
@@ -103,7 +103,7 @@ function Hero() {
                             <span className="hero__headline-text hero__headline-text--lower">E</span>
                             <span className="hero__headline-text hero__headline-text--lower">R</span>
                         </div>
-                        <span className="hero__button hero__bottom-button">Get in Touch</span>
+                        <button className="hero__button hero__bottom-button">Get in Touch</button>
                     </div>
                 </div>
 

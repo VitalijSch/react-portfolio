@@ -25,7 +25,7 @@ function Header() {
             <div className="header__nav-item">
                 <img
                     onMouseEnter={() => handleMouseEnter("about")}
-                    className={`header__nav-icon header__reveal-top ${hoveredItem === "about" ? "header__hide-top" : ""}`}
+                    className={`header__nav-icon header__nav-item--reveal-top ${hoveredItem === "about" ? "header__nav-item--hide-top" : ""}`}
                     src={aboutMeIcon}
                     alt="mark"
                 />
@@ -36,7 +36,7 @@ function Header() {
                 <a className="header__nav-link">Skills</a>
                 <img
                     onMouseEnter={() => handleMouseEnter("skills")}
-                    className={`header__nav-icon header__reveal-left ${hoveredItem === "skills" ? "header__hide-left" : ""}`}
+                    className={`header__nav-icon header__nav-item--reveal-left ${hoveredItem === "skills" ? "header__nav-item--hide-left" : ""}`}
                     src={skillsIcon}
                     alt="underline"
                 />
@@ -46,7 +46,7 @@ function Header() {
                 <a className="header__nav-link">Projects</a>
                 <img
                     onMouseEnter={() => handleMouseEnter("projects")}
-                    className={`header__nav-icon header__reveal-left ${hoveredItem === "projects" ? "header__hide-left" : ""}`}
+                    className={`header__nav-icon header__nav-item--reveal-left ${hoveredItem === "projects" ? "header__nav-item--hide-left" : ""}`}
                     src={projectsIcon}
                     alt="scribble"
                 />
@@ -56,7 +56,7 @@ function Header() {
                 <a className="header__nav-link">Contact</a>
                 <img
                     onMouseEnter={() => handleMouseEnter("contact")}
-                    className={`header__nav-icon header__reveal-left ${hoveredItem === "contact" ? "header__hide-left" : ""}`}
+                    className={`header__nav-icon header__nav-item--reveal-left ${hoveredItem === "contact" ? "header__nav-item--hide-left" : ""}`}
                     src={contactIcon}
                     alt="underline z"
                 />
@@ -67,7 +67,7 @@ function Header() {
                     <img
                         onClick={() => setIsGermanLanguage(false)}
                         onMouseEnter={() => handleMouseEnter("en")}
-                        className={`header__language-icon header__reveal-bottom-right ${isGermanLanguage ? "" : "header__language-icon--no-animation"} ${hoveredItem === "en" ? "header__hide-bottom-right" : ""}`}
+                        className={`header__language-icon header__language-icon--reveal-bottom-right ${isGermanLanguage ? "" : "header__language-icon--no-animation"} ${hoveredItem === "en" ? "header__language-icon--hide-bottom-right" : ""}`}
                         src={englishIcon}
                         alt="border"
                     />
@@ -87,7 +87,7 @@ function Header() {
                     <img
                         onClick={() => setIsGermanLanguage(true)}
                         onMouseEnter={() => handleMouseEnter("de")}
-                        className={`header__language-icon header__reveal-top-left ${isGermanLanguage ? "header__language-icon--no-animation" : ""} ${hoveredItem === "de" ? "header__hide-top-left" : ""}`}
+                        className={`header__language-icon header__language-icon--reveal-top-left ${isGermanLanguage ? "header__language-icon--no-animation" : ""} ${hoveredItem === "de" ? "header__language-icon--hide-top-left" : ""}`}
                         src={germanIcon}
                         alt="border"
                     />

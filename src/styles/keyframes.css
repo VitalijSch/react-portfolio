@@ -1,4 +1,4 @@
-/* Keyframes for header.css */
+/* Keyframes for Header.css */
 
 @keyframes reveal {
     0% {
@@ -44,55 +44,7 @@
     }
 }
 
-.header__reveal-top {
-    --start: 0 0 100% 0;
-    --mid1: 0 0 70% 0;
-    --mid2: 0 0 40% 0;
-}
-
-.header__hide-top {
-    --start: 0 0 100% 0;
-    --mid1: 0 0 70% 0;
-    --mid2: 0 0 40% 0;
-}
-
-.header__reveal-left {
-    --start: 0 100% 0 0;
-    --mid1: 0 70% 0 0;
-    --mid2: 0 40% 0 0;
-}
-
-.header__hide-left {
-    --start: 0 100% 0 0;
-    --mid1: 0 70% 0 0;
-    --mid2: 0 40% 0 0;
-}
-
-.header__reveal-bottom-right {
-    --start: 100% 0 0 100%;
-    --mid1: 70% 0 0 70%;
-    --mid2: 40% 0 0 40%;
-}
-
-.header__hide-bottom-right {
-    --start: 100% 0 0 100%;
-    --mid1: 70% 0 0 70%;
-    --mid2: 40% 0 0 40%;
-}
-
-.header__reveal-top-left {
-    --start: 0 100% 100% 0;
-    --mid1: 0 70% 70% 0;
-    --mid2: 0 40% 40% 0;
-}
-
-.header__hide-top-left {
-    --start: 0 100% 100% 0;
-    --mid1: 0 70% 70% 0;
-    --mid2: 0 40% 40% 0;
-}
-
-/* Keyframes for hero.css */
+/* Keyframes for Hero.css */
 
 @keyframes expandWidth {
     0% {
@@ -164,5 +116,24 @@
     100% {
         transform: rotate(180deg);
         opacity: 0;
+    }
+}
+
+/* Keyframes for AboutMe.css */
+
+@keyframes revealHide {
+
+    0%,
+    30% {
+        clip-path: inset(var(--start));
+    }
+
+    40%,
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(var(--start));
     }
 }

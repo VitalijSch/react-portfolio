@@ -1,3 +1,4 @@
+import AboutMe from './features/about-me/AboutMe'
 import Hero from './features/hero/Hero'
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <Hero />
+      <AboutMe />
     </>
   )
 }
